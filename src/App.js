@@ -46,11 +46,15 @@ function App() {
 
 function Counter(){
   const [count, setCount] = useState(10);
-  return(
+  const handleIncrease = () => setCount(count + 1);
+  const handleDecrease = () => setCount(count - 1);
+  return (
     <div>
       <h1>Count:{count}</h1>
+      <button onMouseMove={handleDecrease}>Decrease</button>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
     </div>
-  )
+  );
 }
 
 function Product(props) {
